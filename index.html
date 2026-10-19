@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gửi bạn nhân ngày 20/10</title>
+  <meta name="description" content="Một lá thư nhỏ từ ban Học tập - Nghiên cứu khoa học">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Be+Vietnam+Pro:wght@400;500;600&family=Dancing+Script:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="petals"></div>
+
+  <!-- Màn 1: nhập thông tin -->
+  <section id="screen-form" class="screen active">
+    <div class="paper">
+      <p class="eyebrow">20 . 10 . 2026</p>
+      <h1>Có thư cho bạn nè</h1>
+      <p class="sub">Điền tên với ngày sinh để mở lá thư dành riêng cho bạn nha.</p>
+
+      <form id="form">
+        <label>
+          <span>Tên của bạn</span>
+          <input type="text" id="name" placeholder="VD: Minh Anh" maxlength="30" autocomplete="off" required>
+        </label>
+        <label>
+          <span>Ngày sinh</span>
+          <input type="date" id="dob" required>
+        </label>
+        <p class="error" id="error"></p>
+        <button type="submit" class="btn">Nhận thư ✉</button>
+      </form>
+
+      <p class="from">từ ban Học tập - Nghiên cứu khoa học</p>
+    </div>
+  </section>
+
+  <!-- Màn 2: phong bì -->
+  <section id="screen-envelope" class="screen">
+    <div class="envelope" id="envelope">
+      <div class="env-back"></div>
+      <div class="env-letter"></div>
+      <div class="env-front"></div>
+      <div class="env-flap"></div>
+      <div class="seal">♡</div>
+    </div>
+    <p class="hint">Chạm để mở</p>
+  </section>
+
+  <!-- hoa nở khi mở thư -->
+  <div id="bloom"></div>
+
+  <!-- Màn 3: lá thư -->
+  <section id="screen-letter" class="screen">
+    <div class="card">
+      <p class="eyebrow">Side A · Từ Tani</p>
+      <h2>Songs for <span id="to-name"></span></h2>
+
+      <div class="cassette" id="cassette">
+        <div class="cas-label">
+          <span class="cas-title" id="cas-title"></span>
+          <span class="cas-sign" id="cas-sign"></span>
+        </div>
+        <div class="cas-window">
+          <div class="reel"></div>
+          <div class="tape"></div>
+          <div class="reel"></div>
+        </div>
+        <div class="cas-bottom">
+          <i></i><i></i><i></i><i></i>
+        </div>
+      </div>
+
+      <div class="player">
+        <p class="song-note" id="song-note"></p>
+        <div class="tracks" id="tracks"></div>
+        <p class="now" id="now"></p>
+        <div class="spotify" id="spotify"></div>
+      </div>
+
+      <div class="note">
+        <p class="note-tag">Liner note</p>
+        <div class="sign-info">
+          <span class="sign-big" id="sign-symbol"></span>
+          <div>
+            <p class="sign-name" id="sign-name"></p>
+            <p class="sign-date" id="sign-date"></p>
+          </div>
+        </div>
+        <div class="chips" id="chips"></div>
+
+        <p class="greet">Gửi <span id="greet-name"></span> xinh đẹp,</p>
+        <p id="wish"></p>
+        <p id="closing"></p>
+        <p class="signature">Tani</p>
+        <p class="role">Phó ban Học tập - Nghiên cứu khoa học</p>
+      </div>
+
+      <button class="btn ghost" id="again">Mở thư cho người khác</button>
+    </div>
+  </section>
+
+  <button id="sound" class="sound" aria-label="Bật/tắt nhạc">♪</button>
+
+  <script src="script.js"></script>
+  <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
+</body>
+</html>
